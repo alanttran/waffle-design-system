@@ -33,4 +33,4 @@ fractal.web.set('static.path', path.join(__dirname, 'src/public'));
 /*
  * Tell the Fractal where to build
  */
-fractal.web.set('builder.dest', __dirname + '/build');
+fractal.web.set('builder.dest', __dirname + '/docs');
