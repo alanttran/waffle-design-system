@@ -15,6 +15,8 @@
   },
   "homepage": "https://github.com/alanttran/waffle-design-system#readme",
   "dependencies": {
-    "@frctl/fractal": "^1.3.0"
-  }
+    "@frctl/fractal": "^1.3.0",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {}
 }
