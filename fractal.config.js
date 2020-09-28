@@ -34,3 +34,16 @@ fractal.web.set('static.path', path.join(__dirname, 'src/public'));
  * Tell the Fractal where to build
  */
 fractal.web.set('builder.dest', __dirname + '/docs');
+
+// require the Mandelbrot theme module
+const mandelbrot = require('@frctl/mandelbrot');
+
+// create a new instance with custom config options
+const myCustomisedTheme = mandelbrot({
+    skin: 'aqua',
+    highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css'
+});
+
+// tell Fractal to use the configured theme by default
+fractal.web.theme(myCustomisedTheme);
+
