@@ -28,3 +28,7 @@ When linking to an external resource on a separate domain, it's polite to inform
   text-indent: 1em; /*width of icon*/
 }
 ```
+
+### Linkjacking for smoothscroll should be recreated in javacript
+If you're linkjacking using .preventDefault() so that you linking will instead scroll - make sure to re-apply the focus state to the correct spot as well as update the URL with the correct hash. 
+Source: Inclusive Design Patterns Page 148

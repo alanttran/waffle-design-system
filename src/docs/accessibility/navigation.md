@@ -22,4 +22,27 @@ Use **aria-described-by** to allow screen readers to read information that is hi
   <div hidden id="current">Current Page</div>
 </nav>
 ```
+## Use aria-labelledby or aria-label to describe multiple &lt;nav>
+Unlike headings and links, landmarks do not constitute their own labels, they are simply identified by their role. To avoid "Navigation, Navigation" - use **aria-labelledby** and relate it to the heading element. 
 
+``` html
+<nav class="toc" aria-labelledby="contents-heading">
+  <h2 id="contents-heading">Contents</h2>
+  <ul>
+    <li><a href="#heading">Heading</a></li>
+    <li>...</li>
+  </ul>
+</nav>
+```
+
+If lacking a header - you can use **aria-label** instead. 
+``` html
+<nav class="toc" aria-label="contents">
+  <ul>
+    <li><a href="#heading">Heading</a></li>
+    <li>...</li>
+  </ul>
+</nav>
+```
+
+In either implementation, the screen reader will read the landmark as "Contents navigation". For each focusable link it will read "Contents navigation landmark, list, one of four items, our history, link". 

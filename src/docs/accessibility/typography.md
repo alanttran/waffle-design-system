@@ -30,7 +30,19 @@ Logically should only have one per page. Both NVDA and JAWS users can press 1 to
 **WCAG Success Criteria 1.3.1 - Info and Relationships (A)**
 > Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. 
 
+### Heading 2 is a good title for table of contents
+If you have a table of contents - it is a good idea to have the title be an h2 as the next logical step in the heading order. 
+``` html
+<nav class="toc">
+  <h2>Contents</h2>
+  <ul>
+    <li><a href="#heading">Content</a></li>
+    <li>...</li>
+  </ul>
+</nav>
+```
+
 ## Avoid
 
-### Justification
+### Justification impairs readability
 Justification makes each line the same length which can make them look neater but impair readability. 
