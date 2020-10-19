@@ -75,7 +75,8 @@
 
     
     
-    <h2 id="set-a-max-width-for-readability">Set a max-width for readability</h2>
+    <h2 id="recomendations">Recomendations</h2>
+<h3 id="set-a-max-width-for-readability">Set a max-width for readability</h3>
 <p>Recommendation is between 45-75 characters in a line. 60rem is about 60 characters wide. </p>
 <pre><code class="hljs language-css"><span class="hljs-selector-tag">main</span>{
   <span class="hljs-attribute">max-width</span>: <span class="hljs-number">60rem</span>;
@@ -83,15 +84,15 @@
 <blockquote>
 <p>Width is no more than 80 characters or glyphs</p>
 </blockquote>
-<h2 id="set-unitless-line-height">Set unitless line-height</h2>
-<p>Paragraph is a good indicator of written text and should get a line-height property compared to other tags.</p>
+<h3 id="set-unitless-line-height">Set unitless line-height</h3>
+<p>Paragraph is a good indicator of written text and should get a line-height property compared to other tags. However - for other situations, line-height: 1 is more useful to get the visual alignment and accurate spacing around elements.  </p>
 <pre><code class="hljs language-css"><span class="hljs-selector-tag">p</span>{
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1.5</span>;
 }</code></pre><p><strong>WCAG Success Criteria 1.4.8 - Visual Presentation (AAA)</strong></p>
 <blockquote>
 <p>Line spacing (leading) is at least space-and-a-half within paragraphs, and paragraph spacing is at least 1.5 times larger than the line spacing.</p>
 </blockquote>
-<h2 id="heading-1">Heading 1</h2>
+<h3 id="heading-1">Heading 1</h3>
 <p>Logically should only have one per page. Both NVDA and JAWS users can press 1 to transport them directly to h1.</p>
 <pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"main"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Heading 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
@@ -99,6 +100,17 @@
 <blockquote>
 <p>Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text. </p>
 </blockquote>
+<h3 id="heading-2-is-a-good-title-for-table-of-contents">Heading 2 is a good title for table of contents</h3>
+<p>If you have a table of contents - it is a good idea to have the title be an h2 as the next logical step in the heading order. </p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">nav</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"toc"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>Contents<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#heading"</span>&gt;</span>Content<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">nav</span>&gt;</span></code></pre><h2 id="avoid">Avoid</h2>
+<h3 id="justification-impairs-readability">Justification impairs readability</h3>
+<p>Justification makes each line the same length which can make them look neater but impair readability. </p>
 
     
 
@@ -349,6 +361,16 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="principles.html" data-pjax>
+                <span>Principles</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="best-practices.html" data-pjax>
                 <span>Best Practices</span>
                 
@@ -379,8 +401,108 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="custom-elements.html" data-pjax>
+                <span>Custom Elements</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="html.html" data-pjax>
                 <span>HTML</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icons.html" data-pjax>
+                <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="images.html" data-pjax>
+                <span>Images</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="labeling.html" data-pjax>
+                <span>Labeling</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="link.html" data-pjax>
+                <span>Link</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lists.html" data-pjax>
+                <span>Lists</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="menu.html" data-pjax>
+                <span>Menu</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navigation.html" data-pjax>
+                <span>Navigation</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="readability.html" data-pjax>
+                <span>Readability</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="semantic-tags.html" data-pjax>
+                <span>Semantic Tags</span>
                 
             </a>
         </li>
@@ -431,8 +553,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-09-28T05:04:51.949Z">
-                9/27/2020
+            <time datetime="2020-10-19T05:51:29.274Z">
+                10/18/2020
             </time>
         </div>
     </div>

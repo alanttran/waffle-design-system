@@ -75,16 +75,17 @@
 
     
     
-    <h2 id="link-text">Link Text</h2>
-<p>Purpose of link should be determined by link text alone (AAA) or its surrounding context (A). </p>
-<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"google.com"</span>&gt;</span>Go to Google<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span></code></pre><p><strong>WCAG Success Criteria 2.4.4 - Link Purpose (In Context) (A)</strong></p>
-<blockquote>
-<p>The purpose of each link can be determined from the link text alone or from the link text together with its programmatically determined link context, except where the purpose of the link would be ambiguous to users in general. </p>
-</blockquote>
-<p><strong>WCAG Success Criteria 2.4.9 - Link Purpose (Link Only) (AAA)</strong></p>
-<blockquote>
-<p>A mechanism is available to allow the purpose of each link to be identified from link text alone, except where the purpose of the link would be ambiguous to users in general. </p>
-</blockquote>
+    <h2 id="defensive-coding">Defensive Coding</h2>
+<h3 id="remove-tags-when-content-is-empty">Remove tags when content is empty</h3>
+<p>This reduces noise and improves performance - especially when markup is produced. </p>
+<pre><code class="hljs language-css"><span class="hljs-selector-tag">main</span><span class="hljs-selector-pseudo">:empty</span>{
+  <span class="hljs-attribute">display</span>: none;
+}</code></pre><h3 id="css-element-class-pairing-helps-enforce-the-right-accessibility-style">CSS Element-Class pairing helps enforce the right accessibility style</h3>
+<p>To enforce the right accessibility styles on the right elements, it is best to pair them in CSS even if it feels redundant. This will prevent wrong class usage on other elements. </p>
+<pre><code class="hljs language-css"><span class="hljs-comment">/* this will prevent .call-to-action be used on other elements like button */</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.call-to-action</span>{}</code></pre><h2 id="tabindex">Tabindex</h2>
+<h3 id="avoid-setting-a-tabindex-larger-than-0">Avoid setting a tabindex larger than 0</h3>
+<p>Explicit tabindex ordering is not good practice and creates issues longterm. Focus order should follow source order for logical keyboard operation. </p>
 
     
 
@@ -334,6 +335,16 @@
     
         
         
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="principles.html" data-pjax>
+                <span>Principles</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
         <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
             <a class="Tree-entityLink" href="" data-pjax>
                 <span>Best Practices</span>
@@ -365,8 +376,108 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="custom-elements.html" data-pjax>
+                <span>Custom Elements</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="html.html" data-pjax>
                 <span>HTML</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="icons.html" data-pjax>
+                <span>Icons</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="images.html" data-pjax>
+                <span>Images</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="labeling.html" data-pjax>
+                <span>Labeling</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="link.html" data-pjax>
+                <span>Link</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="lists.html" data-pjax>
+                <span>Lists</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="menu.html" data-pjax>
+                <span>Menu</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="navigation.html" data-pjax>
+                <span>Navigation</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="readability.html" data-pjax>
+                <span>Readability</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="semantic-tags.html" data-pjax>
+                <span>Semantic Tags</span>
                 
             </a>
         </li>
@@ -417,8 +528,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-09-28T05:04:51.949Z">
-                9/27/2020
+            <time datetime="2020-10-19T05:51:29.274Z">
+                10/18/2020
             </time>
         </div>
     </div>
