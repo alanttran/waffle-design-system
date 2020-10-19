@@ -1,0 +1,2 @@
+### Icon fonts vs SVGs
+Icon fonts have the best advantage when it comes to asset control, backwards compatibility and ease of development. However, since it is a font - it can have rendering issues and anything that fonts may have issues with. Alternatively the better solution would be SVGs, especially for accessibility but they come with added complexity. 
