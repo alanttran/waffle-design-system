@@ -338,7 +338,7 @@ template {
 }
 
 html {
-  font-family: 'Alegreya Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
   color: #212121;
 }
 
@@ -423,13 +423,24 @@ a {
   background-color: #d7d7d7;
 }
 
-.wds-input-field {
+input.wds-input-field {
   display: block;
   height: 40px;
   padding-left: .5rem;
   border: 1px solid #757575;
   border-radius: 4px;
   box-sizing: border-box;
+  margin-top: .25rem;
+}
+
+input.wds-input-field:focus {
+  border-color: #009688;
+  outline: none;
+  box-shadow: inset 0 0 0 1px #009688;
+}
+
+[type="radio"] + label {
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

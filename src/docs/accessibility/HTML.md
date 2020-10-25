@@ -69,7 +69,7 @@ Prevents FOIT (Flash of Invisible Text)
     <main id="main">Lorem </main>
 
     <!-- non-blocking javascript resource -->
-    <script src=scripts.js"></scipt>
+    <script src="scripts.js"></script>
   </body>
 </html>
 ```

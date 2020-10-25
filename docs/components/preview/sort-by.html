@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link media="all" rel="stylesheet" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> 
+  <title>Preview Layout</title>
+</head>
+<body>
+<form role="form" class="sorter" method="get">
+  <fieldset>
+    <legend>Sort by</legend>
+    <input type="radio" name="sort-method" id="most-recent" value="most-recent">
+    <label for="most-recent">most recent</label>    <input type="radio" name="sort-method" id="popularity" value="popularity">
+    <label for="popularity">popularity</label>    <input type="radio" name="sort-method" id="price-low-high" value="price-low-high">
+    <label for="price-low-high">price (low to high)</label>    <input type="radio" name="sort-method" id="price-high-low" value="price-high-low">
+    <label for="price-high-low">price (high to low)</label>  </fieldset>
+  <button type="submit">Sort</button>
+</form>
+
+<style>
+  .sorter [type="radio"]{
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+    clip: rect(1px, 1px, 1px, 1px);
+  }
+  [type="radio"] + label{
+    cursor: pointer;
+    padding: .5rem;
+    border: 1px solid transparent;
+    border-radius: 4px;
+  }
+
+  [type="radio"]:focus + label{
+    border-color: steelblue;
+  }
+
+  [type="radio"]:checked + label{
+    border-color: steelblue;
+  }
+</style>
+<script src="../../script.js"></script>
+</body>
+</html>
+

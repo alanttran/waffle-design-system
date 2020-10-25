@@ -9,11 +9,18 @@
     };
     </script>
     <script>var cl = document.querySelector('html').classList; cl.remove('no-js'); cl.add('has-js');</script>
-    <link rel="shortcut icon" href="../../themes/mandelbrot/favicon.ico" type="image/ico">
+    <link rel="shortcut icon" href="../../theme/favicon.ico" type="image/ico">
+<style>
+    :root {
+        
+        
+        
+    }
+</style>
 
-<link rel="stylesheet" href="../../themes/mandelbrot/css/aqua.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="../../themes/mandelbrot/css/aqua.css?cachebust=1.5.1" type="text/css">
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css?cachebust=1.4.0" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css?cachebust=1.5.1" type="text/css">
 
 
 <title>Best Practices | Waffle Design System</title>
@@ -85,7 +92,9 @@
 <pre><code class="hljs language-css"><span class="hljs-comment">/* this will prevent .call-to-action be used on other elements like button */</span>
 <span class="hljs-selector-tag">a</span><span class="hljs-selector-class">.call-to-action</span>{}</code></pre><h2 id="tabindex">Tabindex</h2>
 <h3 id="avoid-setting-a-tabindex-larger-than-0">Avoid setting a tabindex larger than 0</h3>
-<p>Explicit tabindex ordering is not good practice and creates issues longterm. Focus order should follow source order for logical keyboard operation. </p>
+<p>Explicit tabindex ordering is not good practice and creates issues long term. Focus order should follow source order for logical keyboard operation.</p>
+<h3 id="set-tabindex-1-for-when-you-need-javascript-to-focus">Set tabindex=”-1” for when you need javascript to focus</h3>
+<p>“-1” removes the element from the natural tab order and is best NOT to use on actual clickable element. Instead - these can be used on headers or elements where you need javascript to refocus the user due to dynamic content or a change in the UI.</p>
 
     
 
@@ -195,6 +204,78 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../components/detail/radio-button.html" data-pjax>
+                <span>Radio Button</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../components/detail/required-indicator.html" data-pjax>
+                <span>Required Indicator</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../components/detail/sort-by.html" data-pjax>
+                <span>Sort By</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
@@ -416,6 +497,16 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="infinite-scroll.html" data-pjax>
+                <span>Infinite Scroll</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="labeling.html" data-pjax>
                 <span>Labeling</span>
                 
@@ -438,6 +529,16 @@
         <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="lists.html" data-pjax>
                 <span>Lists</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="loading.html" data-pjax>
+                <span>Loading</span>
                 
             </a>
         </li>
@@ -528,8 +629,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-10-19T05:51:29.274Z">
-                10/18/2020
+            <time datetime="2020-10-25T02:59:06.100Z">
+                10/24/2020
             </time>
         </div>
     </div>
@@ -545,7 +646,7 @@
 
 
 
-<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.4.0"></script>
+<script src="../../themes/mandelbrot/js/mandelbrot.js?cachebust=1.5.1"></script>
 
 
 

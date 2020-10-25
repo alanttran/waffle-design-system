@@ -18,7 +18,10 @@ a.call-to-action{}
 
 ## Tabindex
 ### Avoid setting a tabindex larger than 0
-Explicit tabindex ordering is not good practice and creates issues longterm. Focus order should follow source order for logical keyboard operation. 
+Explicit tabindex ordering is not good practice and creates issues long term. Focus order should follow source order for logical keyboard operation.
+
+### Set tabindex="-1" for when you need javascript to focus
+"-1" removes the element from the natural tab order and is best NOT to use on actual clickable element. Instead - these can be used on headers or elements where you need javascript to refocus the user due to dynamic content or a change in the UI.
 
 
 

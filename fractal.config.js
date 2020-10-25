@@ -41,8 +41,10 @@ const mandelbrot = require('@frctl/mandelbrot');
 // create a new instance with custom config options
 const myCustomisedTheme = mandelbrot({
     skin: 'aqua',
-    highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css'
+    highlightStyles: 'https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css',
+    favicon: '/theme/favicon.ico',
 });
+
 
 // tell Fractal to use the configured theme by default
 fractal.web.theme(myCustomisedTheme);
