@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css?cachebust=1.5.1" type="text/css">
 
 
-<title>Infinite Scroll | Waffle Design System</title>
+<title>Forms | Waffle Design System</title>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Infinite Scroll</h1>
+        <h1 class="Document-title">Forms</h1>
         
 
 
@@ -82,27 +82,14 @@
 
     
     
-    <h2 id="best-practice">Best Practice</h2>
-<h3 id="dont-infinite-scroll">Don’t infinite scroll</h3>
-<p>Specifically automatic infinite scroll which will automatically load new content at the current content’s end. </p>
-<p>Negative user experiences</p>
-<ul>
-<li>Mouse users dragging the scrollbar down and having the scrollbar change shape &amp; position when new content loads</li>
-<li>Keyboard users cannot get to footer content if the main area keeps adding interactive elements</li>
-<li>Tends to be missing status updates</li>
-</ul>
-<h3 id="replace-automatic-infinite-scrolling-with-load-more-button">Replace automatic infinite scrolling with “Load more” button</h3>
-<p>This gives control back to the users where they can choose to load more or proceed to other parts of the UI. </p>
+    <h2 id="consider-using-fieldsets-to-group">Consider using fieldsets to group</h2>
+<p>For radio buttons and checkboxes - fieldsets + legends are definitely recommended for context.</p>
 <ol>
-<li>User clicks the “Load more” button</li>
-<li>Button’s text changes to “Loading..” and doesn’t take more clicks</li>
-<li>Hidden live region announces “Loading more items”</li>
-<li>On success, content is rendered</li>
-<li>Live region announces “Items loaded”</li>
-<li>Focus is moved from the button to the first of the newly loaded items - smooth scroll to reposition.</li>
-<li>Note: Good to focus on header of new item by setting tabindex=”-1” so it can be focused by javascript </li>
-<li>The “Load more” button is moved below</li>
-<li>Optional - after a few times - prompt them to see if they would like auto-loading</li>
+<li>If there is more than one distinct set of fields in total, in the same form or context. </li>
+<li>You need more than one field in this set</li>
+<li>Can a legend be used to aid comprehension of the fields, if not, don’t use a fieldset<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">fieldset</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">legend</span>&gt;</span>Legend<span class="hljs-tag">&lt;/<span class="hljs-name">legend</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">fieldset</span>&gt;</span></code></pre></li>
 </ol>
 
     
@@ -499,8 +486,8 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="forms.html" data-pjax>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Forms</span>
                 
             </a>
@@ -539,8 +526,8 @@
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="infinite-scroll.html" data-pjax>
                 <span>Infinite Scroll</span>
                 
             </a>

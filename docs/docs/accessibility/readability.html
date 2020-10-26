@@ -84,7 +84,15 @@
     
     <h2 id="test-the-readability-of-your-product">Test the readability of your product</h2>
 <p><a href="https://goodcalculators.com/flesch-kincaid-calculator/">Flesch-Kincaid</a> tests gives a score on the readability of your content. You want a score of 60+ or at least 8th/9th grade level for to be easy to read for your users. You can use a <a href="https://chrome.google.com/webstore/detail/tray-readability-tool/eccbjfaplogblgjpopbihpgfgmlgjamf?hl=en-GB">TRAY Chrome browser extension</a> or install a <a href="https://www.npmjs.com/package/readability-checker">readability checker</a> in your project. Products like <a href="https://tenon.io/">Tenon</a> can prove useful for accessible end to end processes. </p>
-
+<h2 id="set-the-dir">Set the dir</h2>
+<p>International audience where languages read right ot left - it is important to set the direction. </p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">html</span> <span class="hljs-attr">lang</span>=<span class="hljs-string">"ar"</span> <span class="hljs-attr">dir</span>=<span class="hljs-string">"rtl"</span>&gt;</span></code></pre><p>Since CSS is not affected by this - it is a good idea to reverse layout of floated content.</p>
+<pre><code class="hljs language-css"><span class="hljs-selector-class">.content</span>{
+  <span class="hljs-attribute">float</span>: left;
+}
+<span class="hljs-selector-attr">[dir=<span class="hljs-string">"rtl"</span>]</span> <span class="hljs-selector-class">.content</span>{
+  <span class="hljs-attribute">float</span>: right;
+}</code></pre>
     
 
 
@@ -193,6 +201,30 @@
             
             
             
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="../../components/detail/password-field.html" data-pjax>
+                <span>Password Field</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
     
         
         
@@ -456,6 +488,16 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="forms.html" data-pjax>
+                <span>Forms</span>
+                
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
             <a class="Tree-entityLink" href="html.html" data-pjax>
                 <span>HTML</span>
                 
@@ -593,6 +635,16 @@
         </li>
         
     
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="validation.html" data-pjax>
+                <span>Validation</span>
+                
+            </a>
+        </li>
+        
+    
 
             </ul>
         </li>
@@ -618,8 +670,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-10-25T02:59:06.100Z">
-                10/24/2020
+            <time datetime="2020-10-26T00:26:31.758Z">
+                10/25/2020
             </time>
         </div>
     </div>

@@ -1,13 +1,16 @@
 <h1 class="padding-all-16">Profile Information</h1>
 <form novalidate>
   <div class="margin-all-16">
-    {{> @text-field label="First name" id="firstname" required="true"}}
+    {{> @text-field label="First name" type="text" id="firstname" required="true"}}
   </div>
   <div class="margin-all-16">
-    {{> @text-field label="Last name" id="lastname" required="true"}}
+    {{> @text-field label="Last name" type="text" id="lastname" required="true"}}
   </div>
   <div class="margin-all-16">
-    {{> @text-field label="Address" id="address" helpText="Your package's new home"}}
+    {{> @text-field label="Address" type="text" id="address" helpText="Your waffle's new home"}}
+  </div>
+  <div class="margin-all-16">
+    {{> @password-field label="Password" id="password" helpText="To protect your waffles"}}
   </div>
   <div class="margin-all-16">
     <button class="wds-button-secondary">Cancel</button>

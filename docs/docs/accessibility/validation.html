@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/atom-one-dark.min.css?cachebust=1.5.1" type="text/css">
 
 
-<title>Infinite Scroll | Waffle Design System</title>
+<title>Validation | Waffle Design System</title>
 
 </head>
 <body>
@@ -65,7 +65,7 @@
 
     <div class="Document-header">
         
-        <h1 class="Document-title">Infinite Scroll</h1>
+        <h1 class="Document-title">Validation</h1>
         
 
 
@@ -82,28 +82,32 @@
 
     
     
-    <h2 id="best-practice">Best Practice</h2>
-<h3 id="dont-infinite-scroll">Don’t infinite scroll</h3>
-<p>Specifically automatic infinite scroll which will automatically load new content at the current content’s end. </p>
-<p>Negative user experiences</p>
-<ul>
-<li>Mouse users dragging the scrollbar down and having the scrollbar change shape &amp; position when new content loads</li>
-<li>Keyboard users cannot get to footer content if the main area keeps adding interactive elements</li>
-<li>Tends to be missing status updates</li>
-</ul>
-<h3 id="replace-automatic-infinite-scrolling-with-load-more-button">Replace automatic infinite scrolling with “Load more” button</h3>
-<p>This gives control back to the users where they can choose to load more or proceed to other parts of the UI. </p>
+    <h2 id="best-practices">Best Practices</h2>
+<h3 id="separate-key-messages-as-separate-concerns">Separate key messages as separate concerns</h3>
 <ol>
-<li>User clicks the “Load more” button</li>
-<li>Button’s text changes to “Loading..” and doesn’t take more clicks</li>
-<li>Hidden live region announces “Loading more items”</li>
-<li>On success, content is rendered</li>
-<li>Live region announces “Items loaded”</li>
-<li>Focus is moved from the button to the first of the newly loaded items - smooth scroll to reposition.</li>
-<li>Note: Good to focus on header of new item by setting tabindex=”-1” so it can be focused by javascript </li>
-<li>The “Load more” button is moved below</li>
-<li>Optional - after a few times - prompt them to see if they would like auto-loading</li>
+<li>Something is broken (the form has errors)</li>
+<li>What needs fixing (what will make the form valid)</li>
 </ol>
+<h4 id="something-broken">Something broken</h4>
+<p>Set a live region above the button since that is where the user was last at. Some validation refocuses the user onto the first error but this is likely to be jarring. We should let the user navigate when they are ready.</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"error"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"assertive"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"submit"</span>&gt;</span>Register<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></code></pre><h4 id="what-needs-fixing">What needs fixing</h4>
+<p>Provide two pieces of information</p>
+<ol>
+<li>The field is invalid</li>
+<li>What would make the field valid</li>
+</ol>
+<h5 id="1-the-field-is-invalid">1. The field is invalid</h5>
+<p>Use aria-invalid to communicate this. This will announce “invalid” on screen readers. </p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"true"</span>&gt;</span></code></pre><p>Leveraging this properly - you can set up some CSS</p>
+<pre><code class="hljs language-css"><span class="hljs-selector-attr">[aria-invalid=<span class="hljs-string">"true"</span>]</span>{
+  <span class="hljs-attribute">border-color</span>: red;
+}</code></pre><h5 id="2-what-would-make-the-field-valid">2. What would make the field valid</h5>
+<p>Use aria-describedby to connect the invalid field to additional information.</p>
+<pre><code class="hljs language-html"><span class="hljs-tag">&lt;<span class="hljs-name">label</span> <span class="hljs-attr">for</span>=<span class="hljs-string">"password"</span>&gt;</span>Password<span class="hljs-tag">&lt;/<span class="hljs-name">label</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">input</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"password"</span> <span class="hljs-attr">aria-invalid</span>=<span class="hljs-string">"true"</span> <span class="hljs-attr">aria-describedby</span>=<span class="hljs-string">"password-hint"</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"password-hint"</span>&gt;</span>You password must be at least 6 characters long<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre><h3 id="when-to-send-feedback-to-the-user">When to send feedback to the user</h3>
+<p>Avoid interruptions and don’t flag errors on the first run. It is best to present errors after the attempted submission. </p>
 
     
 
@@ -539,8 +543,8 @@
     
         
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="infinite-scroll.html" data-pjax>
                 <span>Infinite Scroll</span>
                 
             </a>
@@ -649,8 +653,8 @@
     
         
         
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="validation.html" data-pjax>
+        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
+            <a class="Tree-entityLink" href="" data-pjax>
                 <span>Validation</span>
                 
             </a>
