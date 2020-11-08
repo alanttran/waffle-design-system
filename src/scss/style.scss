@@ -2,10 +2,11 @@
 
 // Globals
 @import 'theme'; 
+@import 'theme--light'; 
 @import 'reset';
+@import 'typography';
 @import 'utilities';
 
 // Components
-@import '../components/example/example';  
 @import '../components/button/button';  
 @import '../components/forms/input';  

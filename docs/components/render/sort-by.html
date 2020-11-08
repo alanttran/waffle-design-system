@@ -3,11 +3,19 @@
 <form role="form" class="sorter" method="get">
   <fieldset>
     <legend>Sort by</legend>
-    <input type="radio" name="sort-method" id="most-recent" value="most-recent">
-    <label for="most-recent">most recent</label>    <input type="radio" name="sort-method" id="popularity" value="popularity">
-    <label for="popularity">popularity</label>    <input type="radio" name="sort-method" id="price-low-high" value="price-low-high">
-    <label for="price-low-high">price (low to high)</label>    <input type="radio" name="sort-method" id="price-high-low" value="price-high-low">
-    <label for="price-high-low">price (high to low)</label>  </fieldset>
+    <div class="w-radio">
+      <input type="radio" name="sort-method" id="most-recent" value="most-recent" >
+      <label for="most-recent">most recent</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="popularity" value="popularity" >
+      <label for="popularity">popularity</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="price-low-high" value="price-low-high" >
+      <label for="price-low-high">price (low to high)</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="price-high-low" value="price-high-low" >
+      <label for="price-high-low">price (high to low)</label>
+    </div>  </fieldset>
   <button type="submit">Sort</button>
 </form>
 

@@ -1,3 +1,4 @@
+hidden: true
 context:
   empty: true
 notes: As long as the required indicator is only showing when the adjacent input is required - the screen reader will read "required" after the label.

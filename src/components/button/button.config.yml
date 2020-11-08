@@ -1,0 +1,19 @@
+context:
+  text: text
+default: primary
+variants:
+  - name: primary
+    context:
+      text: Primary
+  - name: secondary
+    context:
+      text: Secondary
+  - name: progressive
+    context:
+      text: Progressive
+  - name: destructive
+    context:
+      text: Destructive
+  - name: disabled
+    context:
+      text: disabled

@@ -1,32 +1,133 @@
 // main: ../../scss/style.scss 
-@import '../../scss/theme.scss';
+@import '../../scss/theme';
 
 // input fields
-input.wds-input-field{
-  display: block;
-  height: 40px;
-  padding-left: .5rem;
-  border: 1px solid $color-neutral-normal;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: .25rem;
-  &:focus{
-    border-color: $color-teal-normal;
-    outline: none;
-    box-shadow: inset 0 0 0 1px $color-teal-normal;
+input, select{
+  &.wds-input-field{
+    display: block;
+    height: 40px; 
+    padding-left: .5rem;
+    border: 2px solid $w-dark-03;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: .25rem;
+    &:focus{
+      border-color: $w-primary-main;
+      outline: none;
+      //box-shadow: inset 0 0 0 1px $w-primary-main;
+    }
   }
 }
 
+@mixin radio-checkbox{
+  position: relative;
+  width: max-content;
+
+  label{
+    display: block;
+    padding: 4px 0 6px 32px;
+    line-height: 1;
+  }
+
+  input {
+    height: 21px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 21px;
+
+    + label{
+      &:before{
+        border: 2px solid $w-dark-03;
+        background: white;
+        content: "";
+        height: 21px;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 21px;
+      }
+      &:after{
+        content:"";
+        position: absolute;
+        opacity: 0;
+      }
+    }
+  }
+  input:checked + label{
+    &:before{
+      border-color: $w-primary-main;
+    }
+    &:after{
+      opacity: 1;
+    }
+  }
+  input:focus + label{
+    &:before{
+      box-shadow: 0 0 0 3px $w-primary-subtle;
+      outline: 3px solid transparent; /* For Windows high contrast mode. */
+    }
+  }
+}
 
 // radio buttons
-[type="radio"] + label{
-  cursor: pointer;
+.w-radio{
+  @include radio-checkbox();
+  [type="radio"]{
+    + label{
+      &:before{
+        border-radius: 50%;
+      }
+      &:after{
+        border: 8px solid $w-primary-main;
+        border-radius: 50%;
+        left: 4px;
+        top: 4px;
+      }
+    }
+  }
 }
 
-[type="radio"]:focus + label{
-  // styles
+// checkboxes
+.w-checkbox{
+  @include radio-checkbox();
+  [type="checkbox"] {
+
+    + label{
+      &:before{
+        border-radius: 4px;
+      }
+      &:after{
+        border: 4px solid $w-light-04;
+        border-left: 0;
+        border-top: 0;
+        height: 11px;
+        width: 6px;
+        left: 7px;
+        top: 2px;
+        transform: rotate(45deg);
+      }
+    }
+  }
+  
+  [type="checkbox"]:checked + label{
+    &:before{
+      background: $w-primary-main;
+    }
+  }
 }
 
-[type="radio"]:checked + label{
-  // styles
+fieldset{
+  border: 0;
+  padding: 0;
+
+  legend{
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+}
+
+.w-checkbox + .w-checkbox, .w-radio + .w-radio {
+  margin-top: 8px;
 }

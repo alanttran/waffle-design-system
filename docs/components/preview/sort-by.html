@@ -5,18 +5,26 @@
 <head>
   <meta charset="utf-8">
   <link media="all" rel="stylesheet" href="../../style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"> 
   <title>Preview Layout</title>
 </head>
-<body>
+<body style="background-color: #f2f2f5;">
 <form role="form" class="sorter" method="get">
   <fieldset>
     <legend>Sort by</legend>
-    <input type="radio" name="sort-method" id="most-recent" value="most-recent">
-    <label for="most-recent">most recent</label>    <input type="radio" name="sort-method" id="popularity" value="popularity">
-    <label for="popularity">popularity</label>    <input type="radio" name="sort-method" id="price-low-high" value="price-low-high">
-    <label for="price-low-high">price (low to high)</label>    <input type="radio" name="sort-method" id="price-high-low" value="price-high-low">
-    <label for="price-high-low">price (high to low)</label>  </fieldset>
+    <div class="w-radio">
+      <input type="radio" name="sort-method" id="most-recent" value="most-recent" >
+      <label for="most-recent">most recent</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="popularity" value="popularity" >
+      <label for="popularity">popularity</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="price-low-high" value="price-low-high" >
+      <label for="price-low-high">price (low to high)</label>
+    </div>    <div class="w-radio">
+      <input type="radio" name="sort-method" id="price-high-low" value="price-high-low" >
+      <label for="price-high-low">price (high to low)</label>
+    </div>  </fieldset>
   <button type="submit">Sort</button>
 </form>
 

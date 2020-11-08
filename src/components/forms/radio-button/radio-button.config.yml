@@ -1,4 +1,5 @@
 context:
   name: name
+  checked:
   id: id
-  label: label
+  label: radio button

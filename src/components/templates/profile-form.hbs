@@ -1,19 +1,25 @@
-<h1 class="padding-all-16">Profile Information</h1>
+<h2 class="padding-all-16">Waffle Profile</h2>
 <form novalidate>
   <div class="margin-all-16">
-    {{> @text-field label="First name" type="text" id="firstname" required="true"}}
+    {{> @field-text label="First name" type="text" id="firstname" required="true"}}
   </div>
   <div class="margin-all-16">
-    {{> @text-field label="Last name" type="text" id="lastname" required="true"}}
+    {{> @field-text label="Last name" type="text" id="lastname" required="true"}}
   </div>
   <div class="margin-all-16">
-    {{> @text-field label="Address" type="text" id="address" helpText="Your waffle's new home"}}
+    {{> @field-text label="Address" type="text" id="address" helpText="Your waffle's new home"}}
   </div>
   <div class="margin-all-16">
-    {{> @password-field label="Password" id="password" helpText="To protect your waffles"}}
+    {{> @field-password label="Password" id="password" helpText="To protect your waffles"}}
   </div>
+  <fieldset class="margin-all-16">
+    <legend>Waffle type</legend>
+    {{>@radio-button name="type" id="american" label="American" checked="true"}}
+    {{>@radio-button name="type" id="belgian" label="Belgian" }}
+    {{>@radio-button name="type" id="hong-kong" label="Hong Kong" }}
+  </fieldset>
   <div class="margin-all-16">
-    <button class="wds-button-secondary">Cancel</button>
-    <button class="wds-button-primary">Submit</button>
+    {{>@button--secondary text="Cancel"}}
+    {{>@button--primary text="Submit"}}
   </div>
 </form>

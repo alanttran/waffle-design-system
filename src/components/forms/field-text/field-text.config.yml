@@ -1,0 +1,7 @@
+label: Field Text
+context:
+  label: label
+  id: default
+  type: text
+  helpText:
+  required: true

@@ -1,5 +1,5 @@
 // main: ../../scss/style.scss 
-@import '../../scss/theme.scss';
+@import '../../scss/theme--light.scss';
 
 @mixin button{
   display: inline-block;
@@ -17,25 +17,85 @@
   border: 1px solid transparent;
   border-radius: 4px;
   height: 40px;
-  &:hover{
-    cursor: pointer;
+  font-weight: 500;
+  min-width: 100px;
+  box-shadow: $w-light-elevation-02;
+  &:disabled{
+    color: $w-dark-04;
+    background: $w-light-00;
+    cursor: default;
+    &:hover, :active{
+      background: $w-light-00;
+      color: $w-dark-04;
+    }
   }
 }
 
-.wds-button-primary{
+.w-button-primary{
   @include button;
-  background-color: $color-primary-dark;
+  background-color: $w-primary-main;
   color: white;
   &:hover{
-    background-color: $color-primary-normal;
+    background-color: $w-primary-lighter;
+  }
+  &:active{
+    background-color: $w-primary-darker;
+  }
+  &:focus{
+    box-shadow: 0 0 0 3px $w-primary-subtle;
+    outline: none;
   }
 }
 
-.wds-button-secondary{ 
+.w-button-secondary{ 
   @include button;
-  background-color: $color-neutral-light; 
+  background-color: $w-light-04; 
+  border-color: $w-primary-main;
   color: $color-neutral-dark;
   &:hover{
-    background-color: lighten($color-neutral-light, 10);
+    background-color: darken($w-light-04, 5);
   }
+  &:active{
+    background-color: darken($w-light-04, 10);
+  }
+  &:focus{
+    box-shadow: 0 0 0 3px $w-primary-subtle;
+    outline: none;
+  }
+}
+
+.w-button-progressive{ 
+  @include button;
+  background-color: $w-green-01; 
+  color: $w-light-04;
+  &:hover{
+    background-color: $w-green-02; 
+  }
+  &:active{
+    background-color: $w-green-00; 
+  }
+  &:focus{
+    box-shadow: 0 0 0 3px $w-green-04;
+    outline: none; 
+  }
+}
+
+.w-button-destructive{ 
+  @include button;
+  background-color: $w-red-01; 
+  color: $w-light-04;
+  &:hover{
+    background-color: $w-red-02; 
+  }
+  &:active{
+    background-color: $w-red-00; 
+  }
+  &:focus{
+    box-shadow: 0 0 0 3px $w-red-04;
+    outline: none;
+  }
+}
+
+[aria-pressed='true']{
+  box-shadow: inset  0 0 5px 1px $color-gray-normal;
 }

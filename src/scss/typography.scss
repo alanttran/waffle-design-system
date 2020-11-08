@@ -1,0 +1,37 @@
+// main: style.scss
+@import 'theme--light';
+
+html{
+  font-family: 'Inter', sans-serif;
+  color: $w-dark-00;  
+}
+
+h1{
+  font-size: $w-headings-h1-font-size; // 40px
+  font-weight: $w-font-weight-bold;
+}
+h2{
+  font-size: $w-headings-h2-font-size; // 32px
+  font-weight: $w-font-weight-bold;
+}
+h3{
+  font-size: $w-headings-h3-font-size; // 28px
+  font-weight: $w-font-weight-bold;
+}
+h4{
+  font-size: $w-headings-h4-font-size; // 24px
+  font-weight: $w-font-weight-bold;
+}
+h5{
+  font-size: $w-headings-h5-font-size; // 20px
+  font-weight: $w-font-weight-bold;
+}
+h6{
+  font-size: $w-headings-h6-font-size; // 16px
+  font-weight: $w-font-weight-bold;
+}
+
+p{
+  // WCAG 1.4.8 Visual Presentation
+  line-height: 1.5;
+}
