@@ -27,3 +27,11 @@ function pressed(e){
   let pressed = button.getAttribute('aria-pressed') === 'true';
   button.setAttribute('aria-pressed', !pressed);
 }
+
+function rowHighlight(e){
+  var checkbox = e.target;
+  var row = checkbox.parentNode.parentNode.parentNode;
+  var selected = checkbox.checked ? '#CCDDFF' : 'none';
+  row.style.background = selected;
+
+}

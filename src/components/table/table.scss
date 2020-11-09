@@ -1,0 +1,29 @@
+// main: ../../scss/style.scss 
+@import '../../scss/theme--light.scss';
+
+table{
+  width: 100%;
+  border: 1px solid $w-dark-04;
+  border-spacing: 0;
+  border-radius: 4px;
+  background-color: $w-light-04;
+  th{
+    text-align: left;
+    font-weight: 600;
+  }
+
+  td, th{
+    border-bottom: 1px solid $w-dark-04;
+    padding: 12px;
+    line-height: 1;
+    font-size: .875rem;
+
+    .w-checkbox{
+      // to center checkbox in a row
+      margin-top: -12px;
+    }
+  }
+  tr:last-child > td{
+    border-bottom: none;
+  }
+}

@@ -1,0 +1,6 @@
+context:
+  text: text
+default: warning
+variants:
+  - name: warning
+  - name: success

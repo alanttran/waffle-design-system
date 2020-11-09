@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <th>{{>@checkbox}}</th>
+    <th>#</th>
+    <th>Currency</th>
+    <th>Price</th>
+    <th>24h Volume</th>
+    <th>Market Capital</th>
+  </thead>
+  <tbody>
+    {{#each data}}
+    <tr>
+      <td style="width:10px">{{>@checkbox id=@index function="rowHighlight(event)"}}</td>
+      {{#each row}}
+      <td>{{this}}</td>
+      {{/each}}
+    </tr>
+    {{/each}}
+  </tbody>
+</table>

@@ -338,6 +338,10 @@ template {
   display: none;
 }
 
+html, body {
+  height: 100%;
+}
+
 /* Effect styles */
 html {
   font-family: 'Inter', sans-serif;
@@ -395,25 +399,116 @@ p {
 }
 
 /* Effect styles */
-.w-alert {
+.w-alert--warning {
   padding: 1rem;
-  background: #E5F0FF;
   border-radius: 2px;
-  border-left: 2px solid #0063F7;
+  border-left: 2px solid;
   display: flex;
   align-items: center;
   line-height: 1;
+  border-left-color: #E57A00;
+  background: #FFF8E5;
 }
 
-.w-alert .w-alert-content {
+.w-alert--warning .w-alert-content {
+  font-size: .875rem;
   padding-left: 1rem;
   font-weight: 500;
-  font-size: 12px;
   flex: auto;
 }
 
-.w-alert .ri-alert-fill {
-  color: #FF8800;
+.w-alert--warning .ri-close-line {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.w-alert--warning .ri-alert-fill {
+  color: #E57A00;
+  font-size: 1.5rem;
+}
+
+.w-alert--success {
+  padding: 1rem;
+  border-radius: 2px;
+  border-left: 2px solid;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  border-left-color: #05A660;
+  background: #E3FFF1;
+}
+
+.w-alert--success .w-alert-content {
+  font-size: .875rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  flex: auto;
+}
+
+.w-alert--success .ri-close-line {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.w-alert--success .ri-checkbox-circle-fill {
+  color: #05A660;
+  font-size: 1.5rem;
+}
+
+.w-alert--error {
+  padding: 1rem;
+  border-radius: 2px;
+  border-left: 2px solid;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  border-left-color: #E53535;
+  background: #FFE5E5;
+}
+
+.w-alert--error .w-alert-content {
+  font-size: .875rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  flex: auto;
+}
+
+.w-alert--error .ri-close-line {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.w-alert--error .ri-error-warning-fill {
+  color: #E53535;
+  font-size: 1.5rem;
+}
+
+.w-alert--info {
+  padding: 1rem;
+  border-radius: 2px;
+  border-left: 2px solid;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  border-left-color: #004FC4;
+  background: #E5F0FF;
+}
+
+.w-alert--info .w-alert-content {
+  font-size: .875rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  flex: auto;
+}
+
+.w-alert--info .ri-close-line {
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
+
+.w-alert--info .ri-information-fill {
+  color: #004FC4;
+  font-size: 1.5rem;
 }
 
 /* Effect styles */
@@ -795,6 +890,35 @@ fieldset legend {
 
 .w-checkbox + .w-checkbox, .w-radio + .w-radio {
   margin-top: 8px;
+}
+
+/* Effect styles */
+table {
+  width: 100%;
+  border: 1px solid #C7C9D9;
+  border-spacing: 0;
+  border-radius: 4px;
+  background-color: #FFFFFF;
+}
+
+table th {
+  text-align: left;
+  font-weight: 600;
+}
+
+table td, table th {
+  border-bottom: 1px solid #C7C9D9;
+  padding: 12px;
+  line-height: 1;
+  font-size: .875rem;
+}
+
+table td .w-checkbox, table th .w-checkbox {
+  margin-top: -12px;
+}
+
+table tr:last-child > td {
+  border-bottom: none;
 }
 
 /*# sourceMappingURL=style.css.map */

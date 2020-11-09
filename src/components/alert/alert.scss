@@ -1,23 +1,60 @@
 // main: ../../scss/style.scss 
 @import '../../scss/theme--light.scss';
 
-.w-alert{
+@mixin alert{
   padding: 1rem;
-  background: $w-blue-04;
   border-radius: 2px;
-  border-left: 2px solid $w-blue-01;
+  border-left: 2px solid;
   display: flex;
   align-items: center;
   line-height: 1;
 
   .w-alert-content{
+    font-size: .875rem;
     padding-left: 1rem;
     font-weight: 500;
-    font-size: 12px;
     flex: auto;
   }
-
-  .ri-alert-fill{
-    color: $w-orange-01;
+  .ri-close-line{
+    font-size: 1.5rem;
+    margin-left: 1rem;
+  }
+}
+.w-alert{
+  &--warning{
+    @include alert;
+    border-left-color: $w-orange-00;
+    background: $w-orange-04;
+    .ri-alert-fill{
+      color: $w-orange-00;
+      font-size: 1.5rem;
+    }
+  }
+  &--success{
+    @include alert;
+    border-left-color: $w-green-00;
+    background: $w-green-04;
+    .ri-checkbox-circle-fill{
+      color: $w-green-00;
+      font-size: 1.5rem;
+    }
+  }
+  &--error{
+    @include alert;
+    border-left-color: $w-red-00;
+    background: $w-red-04;
+    .ri-error-warning-fill{
+      color: $w-red-00;
+      font-size: 1.5rem;
+    }
+  }
+  &--info{
+    @include alert;
+    border-left-color: $w-blue-00;
+    background: $w-blue-04;
+    .ri-information-fill{
+      color: $w-blue-00;
+      font-size: 1.5rem;
+    }
   }
 }

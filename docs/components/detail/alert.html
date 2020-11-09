@@ -179,7 +179,7 @@
 <div class="Browser-panel Browser-code is-active" data-role="tab-panel" id="browser-80972912b2487b1cca19ed067ca076b7-panel-html">
     <code class="Code Code--lang-html hljs">
         
-        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"assertive"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+        <pre><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert--warning"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"assertive"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ri-alert-fill"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert-content"</span>&gt;</span>Warning: this is an alert<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
     <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ri-close-line"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
@@ -191,7 +191,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-80972912b2487b1cca19ed067ca076b7-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"assertive"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert--warning"</span> <span class="hljs-attr">aria-live</span>=<span class="hljs-string">"assertive"</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"alert"</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ri-alert-fill"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-alert-content"</span>&gt;</span>Warning: this is an alert<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
   <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"ri-close-line"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
@@ -204,7 +204,9 @@
     <code class="Code Code--lang-json hljs">
         
             
-            <pre><span class="hljs-comment">/* No context defined. */</span></pre>
+            <pre>{
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"text"</span>
+}</pre>
             
         
     </code>
@@ -238,24 +240,61 @@
                                 <pre><span class="hljs-comment">// main: ../../scss/style.scss </span>
 <span class="hljs-keyword">@import</span> <span class="hljs-string">'../../scss/theme--light.scss'</span>;
 
-<span class="hljs-selector-class">.w-alert</span>{
+<span class="hljs-keyword">@mixin</span> alert{
   <span class="hljs-attribute">padding</span>: <span class="hljs-number">1rem</span>;
-  <span class="hljs-attribute">background</span>: <span class="hljs-variable">$w-blue-04</span>;
   <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;
-  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">2px</span> solid <span class="hljs-variable">$w-blue-01</span>;
+  <span class="hljs-attribute">border-left</span>: <span class="hljs-number">2px</span> solid;
   <span class="hljs-attribute">display</span>: flex;
   <span class="hljs-attribute">align-items</span>: center;
   <span class="hljs-attribute">line-height</span>: <span class="hljs-number">1</span>;
 
   <span class="hljs-selector-class">.w-alert-content</span>{
+    <span class="hljs-attribute">font-size</span>: .<span class="hljs-number">875rem</span>;
     <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">1rem</span>;
     <span class="hljs-attribute">font-weight</span>: <span class="hljs-number">500</span>;
-    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">12px</span>;
     <span class="hljs-attribute">flex</span>: auto;
   }
-
-  <span class="hljs-selector-class">.ri-alert-fill</span>{
-    <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-orange-01</span>;
+  <span class="hljs-selector-class">.ri-close-line</span>{
+    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;
+  }
+}
+<span class="hljs-selector-class">.w-alert</span>{
+  &amp;--warning{
+    <span class="hljs-keyword">@include</span> alert;
+    <span class="hljs-attribute">border-left-color</span>: <span class="hljs-variable">$w-orange-00</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$w-orange-04</span>;
+    <span class="hljs-selector-class">.ri-alert-fill</span>{
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-orange-00</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    }
+  }
+  &amp;--success{
+    <span class="hljs-keyword">@include</span> alert;
+    <span class="hljs-attribute">border-left-color</span>: <span class="hljs-variable">$w-green-00</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$w-green-04</span>;
+    <span class="hljs-selector-class">.ri-checkbox-circle-fill</span>{
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-green-00</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    }
+  }
+  &amp;--error{
+    <span class="hljs-keyword">@include</span> alert;
+    <span class="hljs-attribute">border-left-color</span>: <span class="hljs-variable">$w-red-00</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$w-red-04</span>;
+    <span class="hljs-selector-class">.ri-error-warning-fill</span>{
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-red-00</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    }
+  }
+  &amp;--info{
+    <span class="hljs-keyword">@include</span> alert;
+    <span class="hljs-attribute">border-left-color</span>: <span class="hljs-variable">$w-blue-00</span>;
+    <span class="hljs-attribute">background</span>: <span class="hljs-variable">$w-blue-04</span>;
+    <span class="hljs-selector-class">.ri-information-fill</span>{
+      <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-blue-00</span>;
+      <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.5rem</span>;
+    }
   }
 }</pre>
                             </code>
@@ -273,7 +312,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">422 Bytes</span>
+                    <span class="Meta-value">1.2 KB</span>
                 </li>
             </ul>
         </div>
@@ -294,6 +333,29 @@
         
         
         
+        
+        <li class="Meta-item">
+            <strong class="Meta-key">Variants <em class="Meta-count">(4)</em>:</strong>
+            <span class="Meta-value Meta-value--linkList">
+            
+                <a href="alert--warning.html">
+                    <span>Warning</span>
+                </a>, 
+            
+                <a href="alert--success.html">
+                    <span>Success</span>
+                </a>, 
+            
+                <a href="alert--error.html">
+                    <span>Error</span>
+                </a>, 
+            
+                <a href="alert--info.html">
+                    <span>Info</span>
+                </a>
+            
+            </span>
+        </li>
         
         <li class="Meta-item">
             <strong class="Meta-key">Preview:</strong>
@@ -381,10 +443,21 @@
         
     
         
+        <li class="Tree-item Tree-collection Tree-depth-2" data-behaviour="collection" id="tree-components-collection-alert">
+            <button class="Tree-collectionLabel" data-role="toggle" aria-expanded="true" aria-controls="tree-components-collection-alert-items">
+                Alert
+            </button>
+            <ul class="Tree-collectionItems" data-role="items" id="tree-components-collection-alert-items">
+            
+            
+            
+            
+    
         
-        <li class="Tree-item Tree-entity is-current" data-state="current" data-role="item">
-            <a class="Tree-entityLink" href="" data-pjax>
-                <span>Alert</span>
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--warning.html" data-pjax>
+                <span>Warning</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -401,6 +474,83 @@
 
 
             </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--success.html" data-pjax>
+                <span>Success</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--error.html" data-pjax>
+                <span>Error</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="alert--info.html" data-pjax>
+                <span>Info</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+
+            </ul>
         </li>
         
     
@@ -1091,8 +1241,8 @@
         </div>
         <div class="Tree-aside">
             Built on:
-            <time datetime="2020-11-09T00:57:29.343Z">
-                11/8/2020
+            <time datetime="2020-11-09T08:43:21.476Z">
+                11/9/2020
             </time>
         </div>
     </div>

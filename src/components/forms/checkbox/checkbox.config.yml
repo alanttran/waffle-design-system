@@ -2,3 +2,4 @@ context:
   name: name
   id: id
   label: checkbox
+  function:
