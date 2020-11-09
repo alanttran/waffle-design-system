@@ -4,6 +4,9 @@ title: Waffle Design System
 
 ![Waffles](waffle.jpg)
 
-This is your index page. You can edit its contents at `docs/01-index.hbs`
+## Built using
 
-test to see if new build script works
+- [Fractal](https://fractal.build/) - UI & handlebars engine
+- [Core Design System](https://www.coredesignsystem.com/) - Visual foundation & spec
+- [Remixicon](https://remixicon.com/) - Icon font set
+
