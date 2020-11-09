@@ -1,0 +1,23 @@
+// main: ../../scss/style.scss 
+@import '../../scss/theme--light.scss';
+
+.w-alert{
+  padding: 1rem;
+  background: $w-blue-04;
+  border-radius: 2px;
+  border-left: 2px solid $w-blue-01;
+  display: flex;
+  align-items: center;
+  line-height: 1;
+
+  .w-alert-content{
+    padding-left: 1rem;
+    font-weight: 500;
+    font-size: 12px;
+    flex: auto;
+  }
+
+  .ri-alert-fill{
+    color: $w-orange-01;
+  }
+}
