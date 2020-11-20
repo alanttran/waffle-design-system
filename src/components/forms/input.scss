@@ -26,6 +26,7 @@ input, select{
     display: block;
     padding: 4px 0 6px 32px;
     line-height: 1;
+    box-sizing: content-box;
   }
 
   input {
@@ -118,7 +119,7 @@ input, select{
         height: 11px;
         width: 6px;
         left: 7px;
-        top: 2px;
+        top: 3px;
         transform: rotate(45deg);
       }
     }

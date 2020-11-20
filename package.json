@@ -15,10 +15,12 @@
   },
   "homepage": "https://github.com/alanttran/waffle-design-system#readme",
   "dependencies": {
-    "@frctl/fractal": "^1.4.1",
-    "@frctl/mandelbrot": "^1.5.1",
+    "@frctl/fractal": "^1.5.1",
+    "@frctl/mandelbrot": "^1.6.0",
     "normalize.css": "^8.0.1",
     "remixicon": "^2.5.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "lodash": "^4.17.20"
+  }
 }

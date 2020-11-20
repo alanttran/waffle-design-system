@@ -1,0 +1,26 @@
+default: info
+variants:
+  - name: info
+    context:
+      type: info
+  - name: success
+    context:
+      type: success
+  - name: warning
+    context:
+      type: warning
+  - name: danger
+    context:
+      type: danger
+  - name: reminder
+    context:
+      type: reminder
+  - name: misc
+    context:
+      type: misc
+  - name: unavailable
+    context:
+      type: unavailable
+  - name: primary
+    context:
+      type: primary

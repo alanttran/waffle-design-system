@@ -340,6 +340,13 @@ template {
 
 html, body {
   height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* Effect styles */
@@ -509,6 +516,133 @@ p {
 .w-alert--info .ri-information-fill {
   color: #004FC4;
   font-size: 1.5rem;
+}
+
+/* Effect styles */
+.w-badge-info {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #004FC4;
+  background: #E5F0FF;
+}
+
+.w-badge-success {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #05A660;
+  background: #E3FFF1;
+}
+
+.w-badge-warning {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #E57A00;
+  background: #FFF8E5;
+}
+
+.w-badge-danger {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #E53535;
+  background: #FFE5E5;
+}
+
+.w-badge-reminder {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #E5B800;
+  background: #FFFEE5;
+}
+
+.w-badge-misc {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #00B7C4;
+  background: #E5FFFF;
+}
+
+.w-badge-unavailable {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #8F90A6;
+  background: #E4E4EB;
+}
+
+.w-badge-offline {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #05A660;
+  background: #E3FFF1;
+}
+
+.w-badge-primary {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20px;
+  font-size: 10px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 4px 8px;
+  color: #3E7BFA;
+  background: #FAFAFC;
 }
 
 /* Effect styles */
@@ -729,6 +863,7 @@ input.wds-input-field:focus, select.wds-input-field:focus {
   display: block;
   padding: 4px 0 6px 32px;
   line-height: 1;
+  box-sizing: content-box;
 }
 
 .w-radio input {
@@ -804,6 +939,7 @@ input.wds-input-field:focus, select.wds-input-field:focus {
   display: block;
   padding: 4px 0 6px 32px;
   line-height: 1;
+  box-sizing: content-box;
 }
 
 .w-checkbox input {
@@ -866,7 +1002,7 @@ input.wds-input-field:focus, select.wds-input-field:focus {
   height: 11px;
   width: 6px;
   left: 7px;
-  top: 2px;
+  top: 3px;
   transform: rotate(45deg);
 }
 
