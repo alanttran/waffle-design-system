@@ -1,5 +1,4 @@
 // main: ../../scss/style.scss 
-@import '../../scss/theme--light.scss';
 
 @mixin badge($text, $bg){
   text-transform: uppercase;
@@ -36,9 +35,6 @@
   }
   &-unavailable{ 
     @include badge($w-dark-03, $w-light-00);
-  }
-  &-offline{ 
-    @include badge($w-green-00, $w-green-04);
   }
   &-primary{ 
     @include badge($w-primary-main, $w-light-03);

@@ -11,9 +11,16 @@
   <title>Preview Layout</title>
 </head>
 
-<body style="background-color: #f2f2f5;">
+<body>
+  <div style="display: flex; align-items: center; padding: 8px;">
+    <label class="switch">
+      <span style="padding-left: 8px; line-height: 24px;">Dark</span>
+      <input type="checkbox"  onchange="darkMode()">
+      <span class="slider round"></span>
+      
+    </label>  </div>
   <div style="height: 100%; display: flex; align-items: center; justify-content: center">
-    <div style="max-width:960px"><label style="font-weight: 600" for="default">label<br/><span style="font-weight: 400; font-size: .875rem;"></span></label>
+    <div style="max-width:960px"><label class="w-label" for="default">label<br/><span class="w-help-text"></span></label>
 <select class="wds-input-field" id="default" >
     <option value="1">Option 1</option>
     <option value="2">Option 2</option>

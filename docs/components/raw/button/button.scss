@@ -1,5 +1,4 @@
 // main: ../../scss/style.scss 
-@import '../../scss/theme--light.scss';
 
 @mixin button{
   display: inline-block;
@@ -51,7 +50,7 @@
   @include button;
   background-color: $w-light-04; 
   border-color: $w-primary-main;
-  color: $color-neutral-dark;
+  color: $w-dark-01;
   &:hover{
     background-color: darken($w-light-04, 5);
   }
@@ -97,5 +96,5 @@
 }
 
 [aria-pressed='true']{
-  box-shadow: inset  0 0 5px 1px $color-gray-normal;
+  box-shadow: inset  0 0 5px 1px $w-dark-03;
 }

@@ -33,5 +33,9 @@ function rowHighlight(e){
   var row = checkbox.parentNode.parentNode.parentNode;
   var selected = checkbox.checked ? '#CCDDFF' : 'none';
   row.style.background = selected;
+}
 
+function darkMode(){
+  var element = document.body;
+  element.classList.toggle("dark");
 }
