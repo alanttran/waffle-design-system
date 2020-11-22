@@ -1,0 +1,11 @@
+// main: style.scss
+
+body.dark{
+  background: $w-dark-01;
+  color: $w-light-03; 
+
+  p{
+    color: $w-light-04;
+  }
+}
+

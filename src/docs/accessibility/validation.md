@@ -35,4 +35,7 @@ Use aria-describedby to connect the invalid field to additional information.
 ```
 
 ### When to send feedback to the user
-Avoid interruptions and don't flag errors on the first run. It is best to present errors after the attempted submission. 
+Avoid interruptions and don't flag errors on the first run. It is best to present errors after the attempted submission. Once the user is now actively correcting errors, then we can validate on each input event and reward the user for fixing the errors. 
+
+### Don't validate per keystroke
+Using debounce utility from Lodash - you can validate once the user has stopped typing but still within the field. Live region is optional to update the user upon valid input. 

@@ -1,9 +1,7 @@
 // main: style.scss
-@import 'theme--light';
 
 html{
-  font-family: 'Inter', sans-serif;
-  color: $w-dark-00;  
+  font-family: 'Inter', sans-serif; 
 }
 
 h1{
@@ -34,4 +32,5 @@ h6{
 p{
   // WCAG 1.4.8 Visual Presentation
   line-height: 1.5;
+  color: $w-dark-02;
 }

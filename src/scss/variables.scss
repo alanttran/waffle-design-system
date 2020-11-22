@@ -1,0 +1,42 @@
+// main: style.scss 
+
+/* Effect styles */
+$w-light-elevation-inset: inset 0px 0.5px 4px rgba(96, 97, 112, 0.32);
+$w-light-elevation-00: none;
+$w-light-elevation-01:  0px 0px 1px rgba(40, 41, 61, 0.08), 0px 0.5px 2px rgba(96, 97, 112, 0.16);
+$w-light-elevation-02:  0px 0px 1px rgba(40, 41, 61, 0.04), 0px 2px 4px rgba(96, 97, 112, 0.16);
+$w-light-elevation-03:  0px 0px 2px rgba(40, 41, 61, 0.04), 0px 4px 8px rgba(96, 97, 112, 0.16);
+$w-light-elevation-04:  0px 2px 4px rgba(40, 41, 61, 0.04), 0px 8px 16px rgba(96, 97, 112, 0.16);
+$w-light-elevation-05:  0px 2px 8px rgba(40, 41, 61, 0.04), 0px 16px 24px rgba(96, 97, 112, 0.16);
+$w-light-elevation-06:  0px 2px 8px rgba(40, 41, 61, 0.08), 0px 20px 32px rgba(96, 97, 112, 0.24);
+$w-dark-elevation-inset: inset 0px 0.5px 4px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-00: none;
+$w-dark-elevation-01: 0px 0px 1px rgba(40, 41, 61, 0.08), 0px 1px 2px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-02: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-03: 0px 0px 2px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-04: 0px 2px 4px rgba(0, 0, 0, 0.04), 0px 8px 16px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-05: 0px 2px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.32);
+$w-dark-elevation-06: 0px 2px 8px rgba(0, 0, 0, 0.08), 0px 20px 32px rgba(0, 0, 0, 0.32);
+
+$w-font-weight-regular: 400;
+$w-font-weight-semibold: 600; 
+$w-font-weight-bold: 700;
+
+$w-body-16pt-font-size: 1rem;
+$w-body-14pt-font-size: 0.88rem;
+$w-headings-h1-font-size: 2.5rem;
+$w-headings-h2-font-size: 2rem;
+$w-headings-h3-font-size: 1.75rem;
+$w-headings-h4-font-size: 1.5rem;
+$w-headings-h5-font-size: 1.25rem;
+$w-headings-h6-font-size: 1rem;
+$w-display-1-font-size: 4rem;
+$w-display-2-font-size: 3.5rem;
+$w-label-small-font-size: 0.62rem;
+$w-label-medium-font-size: 0.75rem;
+$w-label-large-font-size: 0.88rem;
+$w-capitalize-font-size: 0.88rem;
+$w-blockquote-font-size: 1.25rem;
+$w-lead-font-size: 0.88rem;
+$w-small-font-size: 0.75rem;
+$w-tiny-font-size: 0.62rem;

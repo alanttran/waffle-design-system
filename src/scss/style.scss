@@ -1,8 +1,10 @@
 // out: ../public/, sourceMap: true
 
 // Globals
-@import 'theme'; 
-@import 'theme--light'; 
+@import '../components/foundation/colors/colors'; 
+@import 'variables';  
+@import 'theme--light';
+@import 'theme--dark';  
 @import 'reset';
 @import 'typography';
 @import 'utilities';
@@ -11,5 +13,6 @@
 @import '../components/alert/alert'; 
 @import '../components/badge/badge'; 
 @import '../components/button/button';  
-@import '../components/forms/input';  
+@import '../components/input/input';
+@import '../components/input/toggle-switch/toggle-switch';  
 @import '../components/table/table'; 
