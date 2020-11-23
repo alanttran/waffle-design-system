@@ -1,5 +1,6 @@
 context:
   text: text
+  wide:
 default: primary
 variants:
   - name: primary

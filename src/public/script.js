@@ -4,9 +4,12 @@ function checksIfEmpty(e) {
   const requiredIndicator = requiredLabel.firstElementChild.firstElementChild;
   if(e.target.value.trim().length > 0){
     requiredIndicator.style.fill = 'transparent';
+    requiredIndicator.nextElementSibling.style.fill="#8F90A6";
+    
   }
   else{
     requiredIndicator.style.fill = '#FDAC42';
+    requiredIndicator.nextElementSibling.style.fill="black";
   }
 };
 
@@ -37,5 +40,5 @@ function rowHighlight(e){
 
 function darkMode(){
   var element = document.body;
-  element.classList.toggle("dark");
+  element.classList.toggle("w-dark");
 }

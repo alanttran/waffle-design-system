@@ -1,4 +1,4 @@
-<h2 class="padding-all-16">Waffle Profile</h2>
+<h2 class="padding-all-16">Create Account</h2>
 <form novalidate>
   <div class="margin-all-16">
     {{> @field-text label="First name" type="text" id="firstname" required="true"}}
@@ -10,16 +10,18 @@
     {{> @field-text label="Address" type="text" id="address" helpText="Your waffle's new home"}}
   </div>
   <div class="margin-all-16">
-    {{> @field-password label="Password" id="password" helpText="To protect your waffles"}}
+    {{> @field-password required="required" label="Password" id="password" helpText="To protect your waffles"}}
   </div>
   <fieldset class="margin-all-16">
-    <legend>Waffle type</legend>
-    {{>@radio-button name="type" id="american" label="American" checked="true"}}
+    <legend>Favorite waffle type</legend>
+    {{>@radio-button name="type" id="all" label="All of them!!!" checked="true" }}
+    {{>@radio-button name="type" id="american" label="American" }}
     {{>@radio-button name="type" id="belgian" label="Belgian" }}
     {{>@radio-button name="type" id="hong-kong" label="Hong Kong" }}
+    {{>@radio-button name="type" id="pandan" label="Pandan" }}
   </fieldset>
-  <div class="margin-all-16">
+  <div class="margin-all-16" style="text-align: right;">
     {{>@button--secondary text="Cancel"}}
-    {{>@button--primary text="Submit"}}
+    {{>@button--primary text="Create account"}}
   </div>
 </form>

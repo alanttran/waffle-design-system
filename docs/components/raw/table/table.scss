@@ -26,3 +26,13 @@ table{
     border-bottom: none;
   }
 }
+
+.w-dark{
+  table{
+    border-color: $w-dark-02;
+    background-color: lighten($w-dark-01, 5%);
+    td, th{
+      border-bottom: 1px solid $w-dark-02;
+    }
+  }
+}

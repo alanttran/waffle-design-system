@@ -1,0 +1,43 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <link media="all" rel="stylesheet" href="../../style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <title>Preview Layout</title>
+</head>
+
+<body>
+  <div style="position: fixed; left:0; top:0; padding: 8px;">
+    <label class="switch">
+      <span style="padding-left: 8px; line-height: 24px;">Dark</span>
+      <input type="checkbox"  onchange="darkMode()">
+      <span class="slider round"></span>
+    </label>  </div>
+  <div style="height: 100%; display: flex; align-items: center; justify-content: center">
+    <div style="max-width:960px"><div style="width:200px; margin: 0 auto; padding-bottom: 32px;"><img style="width: 100%" src="../../waffle.png" alt="Waffles"></div>
+<div style="padding-bottom: 16px;"><label class="w-label" for="username">Username<br/><span class="w-help-text"></span></label>
+<input class="w-input-field" id="username" type="text"  style="" autofocus></div>
+<div style="padding-bottom: 16px;"><div style="position: relative">
+  <label class="w-label" for="password">Password<br/><span class="w-help-text"></span></label>
+  <input class="w-input-field" id="password" type="password"  style="padding-right: 30px;" >  <div class="w-password-showhide">
+    <input type="checkbox" id="showPassword" value="showPassword" onchange="showHidePassword(event)">
+    <label for="showPassword"></label>
+  </div>
+</div></div>
+<div style="padding-bottom: 16px;"><div class="w-checkbox">
+  <input type="checkbox" name="" id="remember-me" value="remember-me" onchange="" checked>
+  <label for="remember-me">Remember me</label>
+</div></div>
+<div style="padding-bottom: 48px;"><button role="button" class="w-button-primary" style="width: 100%">Log in</button></div>
+<div style="padding-bottom: 48px; text-align: center"><a href="">Forgot your password?</a></div>
+<div style="text-align: center">Don't have an account? <a href="">Create one</a>.</div></div>
+  </div>
+  <script src="../../script.js"></script>
+</body>
+
+</html>

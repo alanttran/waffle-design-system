@@ -1,2 +1,2 @@
 <label class="w-label" for="{{id}}">{{#if required}}{{> @required-indicator}}{{/if}}{{label}}<br/><span class="w-help-text">{{helpText}}</span></label>
-<input class="w-input-field" id="{{id}}" type="{{type}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}}>
+<input class="w-input-field" id="{{id}}" type="{{type}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}} style="{{style}}" {{#if autofocus}}autofocus{{/if}}>

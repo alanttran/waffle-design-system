@@ -9,6 +9,7 @@ input, select{
     border-radius: 4px;
     box-sizing: border-box;
     margin-top: .25rem;
+    width: 100%;
     &:focus{
       outline: none;
       border-color: $w-primary-main;
@@ -16,12 +17,12 @@ input, select{
     }
   }
 }
-.dark{
+.w-dark{
   input, select{
     &.w-input-field{
       border-color: $w-dark-03;
       background: lighten($w-dark-01, 5%);
-      color: $w-light-02;
+      color: white;
       &:focus{
         border-color: $w-primary-darker;
       }
@@ -60,7 +61,7 @@ label.w-label{
     + label{
       &:before{
         border: 2px solid $w-dark-03;
-        background: white;
+        
         content: "";
         height: 21px;
         left: 0;
@@ -105,12 +106,13 @@ label.w-label{
     + label{
       &:before{
         border-radius: 50%;
+        background: white;
       }
       &:after{
-        border: 8px solid $w-primary-main;
+        border: 7px solid $w-primary-main;;
         border-radius: 50%;
-        left: 4px;
-        top: 4px;
+        left: 5.4px;
+        top: 5.7px;
       }
     }
     &:checked{
@@ -131,6 +133,7 @@ label.w-label{
     + label{
       &:before{
         border-radius: 4px;
+        background: white;
       } 
       &:after{
         border: 4px solid $w-light-04;
@@ -153,6 +156,27 @@ label.w-label{
       &:disabled + label{
         &:before{
           background: $w-light-01;
+        }
+      }
+    }
+  }
+}
+
+.w-dark{
+  .w-checkbox, .w-radio{  
+    input{
+      + label{
+        &:before{
+          background: lighten($w-dark-01, 5%);
+        }
+        &:after{
+          border-color: white;
+        }
+      }
+      
+      &:focus + label{
+        &:before{
+          box-shadow: 0 0 0 3px $w-primary-darker;
         }
       }
     }

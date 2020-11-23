@@ -3,3 +3,4 @@ context:
   id: id
   label: checkbox
   function:
+  checked:

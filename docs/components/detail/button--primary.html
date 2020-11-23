@@ -187,7 +187,7 @@
     
     <div class="Browser-panel Browser-code" data-role="tab-panel" id="browser-8572d394166f03d2e241aba02d6eb676-panel-view">
     <code class="Code Code--lang-handlebars hljs">
-        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-button-primary"</span>&gt;</span></span><span class="hljs-template-variable">{{text}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></pre>
+        <pre><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">role</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"w-button-primary"</span> </span></span><span class="hljs-template-tag">{{#<span class="hljs-name"><span class="hljs-builtin-name">if</span></span> wide}}</span><span class="xml"><span class="hljs-tag"><span class="hljs-attr">style</span>=<span class="hljs-string">"width: 100%"</span></span></span><span class="hljs-template-tag">{{/<span class="hljs-name"><span class="hljs-builtin-name">if</span></span>}}</span><span class="xml"><span class="hljs-tag">&gt;</span></span><span class="hljs-template-variable">{{text}}</span><span class="xml"><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span></span></pre>
     </code>
 </div>
 
@@ -197,7 +197,8 @@
         
             
             <pre>{
-  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Primary"</span>
+  <span class="hljs-attr">"text"</span>: <span class="hljs-string">"Primary"</span>,
+  <span class="hljs-attr">"wide"</span>: <span class="hljs-literal">null</span>
 }</pre>
             
         
@@ -281,7 +282,6 @@
   <span class="hljs-keyword">@include</span> button;
   <span class="hljs-attribute">background-color</span>: <span class="hljs-variable">$w-light-04</span>; 
   <span class="hljs-attribute">border-color</span>: <span class="hljs-variable">$w-primary-main</span>;
-  <span class="hljs-attribute">color</span>: <span class="hljs-variable">$w-dark-01</span>;
   &amp;<span class="hljs-selector-pseudo">:hover</span>{
     <span class="hljs-attribute">background-color</span>: darken(<span class="hljs-variable">$w-light-04</span>, <span class="hljs-number">5</span>);
   }
@@ -291,6 +291,21 @@
   &amp;<span class="hljs-selector-pseudo">:focus</span>{
     <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-primary-subtle</span>;
     <span class="hljs-attribute">outline</span>: none;
+  }
+}
+
+<span class="hljs-selector-class">.w-dark</span>{
+  <span class="hljs-selector-class">.w-button-secondary</span>{
+    <span class="hljs-attribute">background-color</span>: transparent;
+    &amp;<span class="hljs-selector-pseudo">:hover</span>{
+      <span class="hljs-attribute">background-color</span>: lighten(<span class="hljs-variable">$w-dark-01</span>, <span class="hljs-number">10</span>);
+    } 
+    &amp;<span class="hljs-selector-pseudo">:active</span>{
+      <span class="hljs-attribute">background-color</span>: lighten(<span class="hljs-variable">$w-dark-01</span>, <span class="hljs-number">15</span>);
+    } 
+    &amp;<span class="hljs-selector-pseudo">:focus</span>{
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-primary-darker</span>;
+    }
   }
 }
 
@@ -328,6 +343,30 @@
 
 <span class="hljs-selector-attr">[aria-pressed='true']</span>{
   <span class="hljs-attribute">box-shadow</span>: inset  <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">5px</span> <span class="hljs-number">1px</span> <span class="hljs-variable">$w-dark-03</span>;
+}
+
+<span class="hljs-selector-class">.w-dark</span>{
+  <span class="hljs-selector-class">.w-button-primary</span>{
+    &amp;<span class="hljs-selector-pseudo">:focus</span>{
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-primary-darker</span>;
+    }
+  }
+  <span class="hljs-selector-class">.w-button-secondary</span>{
+    <span class="hljs-attribute">background-color</span>: transparent; 
+    &amp;<span class="hljs-selector-pseudo">:focus</span>{
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-primary-darker</span>;
+    }
+  }
+  <span class="hljs-selector-class">.w-button-progressive</span>{
+    &amp;<span class="hljs-selector-pseudo">:focus</span>{
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-green-00</span>;
+    }
+  }
+  <span class="hljs-selector-class">.w-button-destructive</span>{
+    &amp;<span class="hljs-selector-pseudo">:focus</span>{
+      <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">3px</span> <span class="hljs-variable">$w-red-00</span>;
+    }
+  }
 }</pre>
                             </code>
                             
@@ -344,7 +383,7 @@
                 </li>
                 <li class="Meta-item">
                     <strong class="Meta-key">Size:</strong>
-                    <span class="Meta-value">2 KB</span>
+                    <span class="Meta-value">2.7 KB</span>
                 </li>
             </ul>
         </div>
@@ -367,7 +406,7 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Variants <em class="Meta-count">(6)</em>:</strong>
+            <strong class="Meta-key">Variants <em class="Meta-count">(5)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
                 <a href="">
@@ -388,10 +427,6 @@
             
                 <a href="button--disabled.html">
                     <span>Disabled</span>
-                </a>, 
-            
-                <a href="button--toggle.html">
-                    <span>Toggle</span>
                 </a>
             
             </span>
@@ -421,10 +456,12 @@
         
         
         <li class="Meta-item">
-            <strong class="Meta-key">Referenced by <em class="Meta-count">(1)</em>:</strong>
+            <strong class="Meta-key">Referenced by <em class="Meta-count">(2)</em>:</strong>
             <span class="Meta-value Meta-value--linkList">
             
-                <a href="profile-form.html">@<span>profile-form</span></a>
+                <a href="create-account.html">@<span>create-account</span></a>, 
+            
+                <a href="login.html">@<span>login</span></a>
             
             </span>
         </li>
@@ -953,30 +990,6 @@
         </li>
         
     
-        
-        
-        <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="button--toggle.html" data-pjax>
-                <span>Toggle</span>
-                
-
-<div class="Status Status--unlabelled">
-
-<div class="Status-dots">
-
-
-<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
-
-
-</div>
-
-</div>
-
-
-            </a>
-        </li>
-        
-    
 
                 </ul>
             </li>
@@ -1349,8 +1362,32 @@
         
         
         <li class="Tree-item Tree-entity" data-role="item">
-            <a class="Tree-entityLink" href="profile-form.html" data-pjax>
-                <span>Profile Form</span>
+            <a class="Tree-entityLink" href="create-account.html" data-pjax>
+                <span>Create Account</span>
+                
+
+<div class="Status Status--unlabelled">
+
+<div class="Status-dots">
+
+
+<span class="Status-dot" style="border-color: #29CC29;" title="Ready"></span>
+
+
+</div>
+
+</div>
+
+
+            </a>
+        </li>
+        
+    
+        
+        
+        <li class="Tree-item Tree-entity" data-role="item">
+            <a class="Tree-entityLink" href="login.html" data-pjax>
+                <span>Login</span>
                 
 
 <div class="Status Status--unlabelled">
@@ -1658,8 +1695,8 @@
                     <dt class="Tree-asideTerm">Built on:</dt>
                     <dd class="Tree-asideDescription">
                         
-                            <time datetime="2020-11-22T06:24:14.954Z">
-                                11/21/2020
+                            <time datetime="2020-11-23T06:11:22.666Z">
+                                11/22/2020
                             </time>
                         
                     </dd>
