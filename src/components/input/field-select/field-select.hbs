@@ -1,5 +1,5 @@
 <label class="w-label" for="{{id}}">{{#if required}}{{> @required-indicator}}{{/if}}{{label}}<br/><span class="w-help-text">{{helpText}}</span></label>
-<select class="wds-input-field" id="{{id}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}}>
+<select class="w-input-field" id="{{id}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}}>
   {{#each options }}
     <option value="{{value}}">{{text}}</option>
   {{/each}}

@@ -1,0 +1,12 @@
+// main: ../../scss/style.scss 
+
+ul > li, ol > li{
+  line-height: 1.5;
+}
+dl dd{
+  margin-left: 0;
+}
+dl dt{
+  color: $w-dark-02; 
+  font-size: $w-body-14pt-font-size;
+}

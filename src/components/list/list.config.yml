@@ -1,0 +1,5 @@
+default: unordered
+variants:
+  - name: unordered
+  - name: ordered
+  - name: description
