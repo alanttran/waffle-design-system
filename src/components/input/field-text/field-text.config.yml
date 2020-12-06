@@ -1,9 +1,11 @@
 label: Text
 context:
-  label: label
+  label: Label
   id: default
   type: text
   helpText:
   required: true
   style:
+  value:
   autofocus:
+  errorText:

@@ -8,12 +8,31 @@ input, select{
     border: 2px solid $w-dark-03;
     border-radius: 4px;
     box-sizing: border-box;
-    margin-top: .25rem;
+    line-height: normal;
+    
     width: 100%;
     &:focus{
       outline: none;
       border-color: $w-primary-main;
       box-shadow: inset 0 0 0 1px $w-primary-main;
+    }
+
+    &[aria-invalid]{
+      border-color: $w-red-00;
+      &:focus{
+        border-color: $w-primary-main;
+      }
+    }
+
+    &[type='search']{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+
+      + .w-button-icon{
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        margin-left: -3px;
+      }
     }
   }
 }
@@ -32,12 +51,26 @@ input, select{
 
 label.w-label{
   font-weight: 600;
-
-  .w-help-text{
+  margin-bottom: .25rem;
+  display: block;
+  .w-help-text, .w-error-text{
     font-weight: 400;
     font-size: .875rem;
   }
+  .w-error-text{
+    color: $w-red-00;
+    position: relative;
+    padding-left: 1.2rem;
+    .ri-alert-line{
+      font-size: 1rem;
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+    }
+  }
 }
+
+
 
 @mixin radio-checkbox{
   position: relative;
@@ -196,3 +229,6 @@ fieldset{
 .w-checkbox + .w-checkbox, .w-radio + .w-radio {
   margin-top: 8px;
 }
+
+
+

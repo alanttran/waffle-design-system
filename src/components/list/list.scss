@@ -1,7 +1,7 @@
 // main: ../../scss/style.scss 
 
-ul > li, ol > li{
-  line-height: 1.5;
+ul > li + li, ol > li + li{
+  margin-top: 8px;
 }
 dl dd{
   margin-left: 0;
@@ -9,4 +9,10 @@ dl dd{
 dl dt{
   color: $w-dark-02; 
   font-size: $w-body-14pt-font-size;
+}
+
+.w-dark{
+  dl dt{
+    color: $w-dark-04; 
+  }
 }

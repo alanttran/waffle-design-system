@@ -2,17 +2,10 @@
 
 @mixin button{
   display: inline-block;
-  overflow: hidden;
   padding: 8.65248px 14px;
-  font-family: inherit;
-  font-size: inherit;
-  color: inherit;
   text-decoration: none;
   text-align: center;
   white-space: nowrap;
-  text-overflow: ellipsis;
-  vertical-align: middle;
-  line-height: inherit;
   border: 1px solid transparent;
   border-radius: 4px;
   height: 40px;
@@ -111,6 +104,12 @@
 
 [aria-pressed='true']{
   box-shadow: inset  0 0 5px 1px $w-dark-03;
+}
+
+.w-button-icon{
+  padding: 10px 12px;
+  width: 40px;
+  min-width: auto;
 }
 
 .w-dark{

@@ -1,11 +1,13 @@
 label: Select
 context:
-  label: label
+  label: Select
   id: default
   options:
     - value: 1
-      text: Option 1
+      text: American
     - value: 2
-      text: Option 2
+      text: Belgian
     - value: 3
-      text: Option 3
+      text: Hong Kong
+    - value: 4
+      text: Pandan

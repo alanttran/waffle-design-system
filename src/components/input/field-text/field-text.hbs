@@ -1,2 +1,7 @@
-<label class="w-label" for="{{id}}">{{#if required}}{{> @required-indicator}}{{/if}}{{label}}<br/><span class="w-help-text">{{helpText}}</span></label>
-<input class="w-input-field" id="{{id}}" type="{{type}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}} style="{{style}}" {{#if autofocus}}autofocus{{/if}}>
+<label class="w-label" for="{{id}}">
+  {{#if required}}{{> @required-indicator}}{{/if}}
+  {{label}}
+  {{#if helpText}}<br/><span class="w-help-text">{{helpText}}</span>{{/if}}
+  {{#if errorText}}<br/><span class="w-error-text" role="alert"> <i class="ri-alert-line"></i> {{errorText}}</span>{{/if}}
+</label>
+<input class="w-input-field" value="{{value}}"{{#if errorText}}aria-invalid="true"{{/if}} id="{{id}}" type="{{type}}" {{#if required}}required onkeyup="checksIfEmpty(event)" {{/if}} style="{{style}}" {{#if autofocus}}autofocus{{/if}}>
